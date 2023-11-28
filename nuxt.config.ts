@@ -46,71 +46,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     '@nuxtjs/robots',
     'nuxt-gtag',
-    'nuxt-security',
   ],
-  security: {
-    headers:
-      process.env.NODE_ENV !== 'production'
-        ? false
-        : {
-            contentSecurityPolicy: {
-              'default-src': ["'self'", 'https:'],
-              'img-src': [
-                "'self'",
-                'data:',
-                'https://*.storyblok.com',
-                'https://*.vercel.com',
-                'https://*.google-analytics.com',
-                'https://*.googletagmanager.com',
-              ],
-              'script-src': [
-                "'self'",
-                'https:',
-                "'unsafe-inline'",
-                "'strict-dynamic'",
-                "'nonce-{{nonce}}'",
-                'https://*.googletagmanager.com',
-                'https://*.google-analytics.com',
-                'https://googletagmanager.com',
-                'https://tagmanager.google.com',
-              ],
-              'script-src-attr': [
-                "'self'",
-                'https:',
-                'data:',
-                'localhost:*',
-                '192.168.0.16:*',
-              ],
-              'connect-src': [
-                "'self'",
-                'https://*.storyblok.com',
-                'https://*.vercel.com',
-                'https://*.google-analytics.com',
-                'https://*.analytics.google.com',
-                'https://*.googletagmanager.com',
-              ],
-              'font-src': [
-                "'self'",
-                'https:',
-                'data:',
-                'https://fonts.gstatic.com',
-              ],
-              'style-src': [
-                "'self'",
-                'https:',
-                "'unsafe-inline'",
-                'https://googletagmanager.com',
-                'https://fonts.googleapis.com',
-                'https://fonts.gstatic.com',
-              ],
-              'frame-ancestors': ["'self'", 'https://*.storyblok.com'],
-              'upgrade-insecure-requests':
-                process.env.NODE_ENV === 'production',
-            },
-            crossOriginEmbedderPolicy: false,
-            crossOriginOpenerPolicy: false,
-          },
-  },
   gtag: {
     id: 'G-DHB1NJW7BD',
   },

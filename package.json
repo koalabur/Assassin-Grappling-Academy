@@ -44,7 +44,6 @@
     "local-ssl-proxy": "^2.0.5",
     "nuxt": "^3.8.2",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-security": "1.0.0-rc.4",
     "nuxt-simple-sitemap": "^4.1.6",
     "prettier": "^3.0.3",
     "sass": "^1.69.5",

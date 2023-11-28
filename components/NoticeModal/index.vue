@@ -15,6 +15,7 @@
 </template>
 <script lang="ts" setup>
 import { useNoticeStore } from '@/stores/notice';
+import type { Notice } from '@/types/components/Notice';
 
 const store = useNoticeStore();
 
@@ -26,7 +27,7 @@ const { data } = await storyblokApi.get('cdn/stories/default-layout', {
 });
 const story = ref(data.story.content);
 
-const notice = computed(() => ({
+const notice = computed<Notice>(() => ({
   title: story.value.title,
   subtitle: story.value.subtitle,
   body: story.value.body,

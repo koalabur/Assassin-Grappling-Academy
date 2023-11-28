@@ -1,28 +1,9 @@
-import type {
-  AssetStoryblok,
-  AssetUrlLinkStoryblok,
-  LinkStoryblok,
-} from '../Storyblok';
+import type { RichtextStoryblok } from '../Storyblok';
 
-type NavMenuData = { name: string; _uid: string; pageLink: LinkStoryblok };
-
-export type NavMenu = NavMenuData[];
-
-export type Logo = AssetStoryblok;
-
-type SocialMediaData = {
-  component: 'media';
-  _uid: string;
-  link: AssetUrlLinkStoryblok;
-  icon: AssetStoryblok;
-};
-
-export type SocialMedia = SocialMediaData[];
-
-export type HeaderCta = AssetUrlLinkStoryblok & { text: string };
-
-export type BusinessInfo = {
-  address: string;
-  googleMapsLink: string;
-  businessNumber: string;
-};
+export interface Notice {
+  title: string;
+  subtitle: string;
+  body: RichtextStoryblok;
+  button: string;
+  useNotice: boolean;
+}

@@ -4,7 +4,7 @@ import { defineStore } from 'pinia';
 export const useNoticeStore = defineStore('notice', () => {
   const visible = ref(false);
 
-  function visibleChange(payload) {
+  function visibleChange(payload: boolean) {
     visible.value = payload;
   }
 

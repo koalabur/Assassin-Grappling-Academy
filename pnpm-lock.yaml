@@ -79,9 +79,6 @@ devDependencies:
   nuxt-gtag:
     specifier: ^1.1.1
     version: 1.1.1
-  nuxt-security:
-    specifier: 1.0.0-rc.4
-    version: 1.0.0-rc.4
   nuxt-simple-sitemap:
     specifier: ^4.1.6
     version: 4.1.6(@nuxt/devtools@1.0.4)(@vue/compiler-core@3.3.9)(nuxt@3.8.2)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.7)(webpack@5.89.0)
@@ -3960,13 +3957,6 @@ packages:
     dev: true
     optional: true
 
-  /basic-auth@2.0.1:
-    resolution: {integrity: sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==}
-    engines: {node: '>= 0.8'}
-    dependencies:
-      safe-buffer: 5.1.2
-    dev: true
-
   /big-integer@1.6.51:
     resolution: {integrity: sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==}
     engines: {node: '>=0.6'}
@@ -4188,30 +4178,6 @@ packages:
   /chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-    dev: true
-
-  /cheerio-select@2.1.0:
-    resolution: {integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==}
-    dependencies:
-      boolbase: 1.0.0
-      css-select: 5.1.0
-      css-what: 6.1.0
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.1.0
-    dev: true
-
-  /cheerio@1.0.0-rc.12:
-    resolution: {integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==}
-    engines: {node: '>= 6'}
-    dependencies:
-      cheerio-select: 2.1.0
-      dom-serializer: 2.0.0
-      domhandler: 5.0.3
-      domutils: 3.1.0
-      htmlparser2: 8.0.2
-      parse5: 7.1.2
-      parse5-htmlparser2-tree-adapter: 7.0.0
     dev: true
 
   /chokidar@3.5.3:
@@ -4571,6 +4537,7 @@ packages:
     resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
     requiresBuild: true
     dev: true
+    optional: true
 
   /cssnano-preset-default@6.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-7VzyFZ5zEB1+l1nToKyrRkuaJIx0zi/1npjvZfbBwbtNTzhLtlvYraK/7/uqmX2Wb2aQtd983uuGw79jAjLSuQ==}
@@ -6323,15 +6290,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /htmlparser2@8.0.2:
-    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.1.0
-      entities: 4.5.0
-    dev: true
-
   /http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
     dev: true
@@ -7234,13 +7192,6 @@ packages:
       magic-string: 0.30.5
     dev: true
 
-  /magic-string@0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
-    dev: true
-
   /magic-string@0.30.5:
     resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
     engines: {node: '>=12'}
@@ -7901,39 +7852,12 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt-csurf@1.3.2:
-    resolution: {integrity: sha512-/+hqg3clZ+YXeXMz3wdx9aGtk03APQNO6lkgjWSzCB87rVn/TBxSYWXw7Pi8Gl8DgbJiUTC9yy7UzCmXrJTFLQ==}
-    dependencies:
-      '@nuxt/kit': 3.8.2
-      defu: 6.1.3
-      uncsrf: 1.1.1
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
   /nuxt-gtag@1.1.1:
     resolution: {integrity: sha512-AkTK++e4vFHyoc04GcRx7dQvx9xchVLav/YAP3aM6oL/ZkZtW50M0/2re4zmPWjeu36ckbpcOHJrj+zptQIMyw==}
     dependencies:
       '@nuxt/kit': 3.8.2
       defu: 6.1.3
       pathe: 1.1.1
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /nuxt-security@1.0.0-rc.4:
-    resolution: {integrity: sha512-xYj0+kXpgePq59UPTZ73eGN74LT2ByFMbobV5eZkePVLWwa8MNl1j0XhM2IjdBhowFnCMasApU2P/dnP27J96g==}
-    dependencies:
-      '@nuxt/kit': 3.8.2
-      basic-auth: 2.0.1
-      cheerio: 1.0.0-rc.12
-      defu: 6.1.3
-      nuxt-csurf: 1.3.2
-      pathe: 1.1.1
-      unplugin-remove: 0.1.5
-      xss: 1.0.14
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -8395,19 +8319,6 @@ packages:
     resolution: {integrity: sha512-xDvOoLU5XRrcOZvnI6b8zA6n9O9ejNk/GExuz1yBuWUGn9KA97GI6HTs6u02wKara1CeVmZhH+0TZFdWScR89w==}
     dependencies:
       parse-path: 7.0.0
-    dev: true
-
-  /parse5-htmlparser2-tree-adapter@7.0.0:
-    resolution: {integrity: sha512-B77tOZrqqfUfnVcOrUvfdLbz4pu4RopLD/4vmu3HUPswwTA8OH0EMW9BlWR2B0RCoiZRAHEUu7IxeP1Pd1UU+g==}
-    dependencies:
-      domhandler: 5.0.3
-      parse5: 7.1.2
-    dev: true
-
-  /parse5@7.1.2:
-    resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
-    dependencies:
-      entities: 4.5.0
     dev: true
 
   /parseurl@1.3.3:
@@ -9627,11 +9538,6 @@ packages:
       whatwg-url: 7.1.0
     dev: true
 
-  /sourcemap-codec@1.4.8:
-    resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
-    deprecated: Please use @jridgewell/sourcemap-codec instead
-    dev: true
-
   /spdx-correct@3.2.0:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
     dependencies:
@@ -10408,10 +10314,6 @@ packages:
   /uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
 
-  /uncsrf@1.1.1:
-    resolution: {integrity: sha512-wH9+N3oNdr2XB3egUKxCR26XTVfYywv2STZYtZLIp8votOf0/9b0axA9gpIHdYfgq/Myfh/HS5e0lQ/+27dj9A==}
-    dev: true
-
   /unctx@2.3.1:
     resolution: {integrity: sha512-PhKke8ZYauiqh3FEMVNm7ljvzQiph0Mt3GBRve03IJm7ukfaON2OBK795tLwhbyfzknuRRkW0+Ze+CQUmzOZ+A==}
     dependencies:
@@ -10532,14 +10434,6 @@ packages:
       - postcss
       - rollup
       - supports-color
-    dev: true
-
-  /unplugin-remove@0.1.5:
-    resolution: {integrity: sha512-WZ2253kheZQ0Py/3GwdSdhNsc/3nZRd1q2W07MMt9Wkhe1r06SUtdaqobzo5/Rd90sMSpISHjSF9XMzJC7R7Vg==}
-    dependencies:
-      '@rollup/pluginutils': 4.2.1
-      magic-string: 0.26.7
-      unplugin: 1.5.1
     dev: true
 
   /unplugin-vue-router@0.7.0(vue-router@4.2.5)(vue@3.3.9):
@@ -11289,6 +11183,7 @@ packages:
       commander: 2.20.3
       cssfilter: 0.0.10
     dev: true
+    optional: true
 
   /y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
