@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: process.env.NUXT_PUBLIC_NODE_ENV === 'production',
   app: {
     head: {
       htmlAttrs: {
