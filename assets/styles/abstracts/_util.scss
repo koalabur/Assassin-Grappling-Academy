@@ -1,0 +1,15 @@
+@mixin edge-padding {
+  padding-left: #{fluid(12px, 20px)};
+  padding-right: #{fluid(12px, 20px)};
+}
+
+@mixin page-width {
+  width: 100%;
+  max-width: #{fluid(900px, 1400px)};
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin std-bot-spacing {
+  margin-bottom: #{fluid(60px, 140px)};
+}

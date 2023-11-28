@@ -1,0 +1,29 @@
+$primary-color: #ff0000 !default;
+$secondary-color: #131313 !default;
+$neutral-color-1: #d9d9d9 !default;
+$neutral-color-2: #ffffff !default;
+$neutral-color-3: #b6b6b6 !default;
+$neutral-color-4: #f6f6f6 !default;
+
+$event-dark-blue: #00296b !default;
+$event-light-blue: #0248ba !default;
+$event-dark-red: #ad0019 !default;
+$event-light-red: #ff0126 !default;
+$event-dark-gray: #171717 !default;
+$event-light-gray: #464646 !default;
+$event-dark-orange: #bd5b00 !default;
+$event-light-orange: #ff7a00 !default;
+$event-dark-white: #6a6a6a !default;
+$event-light-white: #bfbfbf !default;
+$event-dark-all-ages: linear-gradient(
+  90deg,
+  $event-dark-red 0%,
+  $event-dark-blue 100%
+) !default;
+$event-light-all-ages: linear-gradient(
+  90deg,
+  $event-light-red 0%,
+  $event-light-blue 100%
+) !default;
+
+$primary-font: 'Outfit', sans-serif !default;

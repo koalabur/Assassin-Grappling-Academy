@@ -1,0 +1,62 @@
+{
+  "name": "assassin-grappling",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "nuxt prepare",
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+    "generate-sb-components": "storyblok pull-components --space 1017285",
+    "generate-sb-types": "storyblok-generate-ts source=./components.1017285.json target=./component-types-sb",
+    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lint:js:fix": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore . --fix"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "browserslist": "> 0.25%, not dead",
+  "devDependencies": {
+    "@marvr/storyblok-rich-text-vue-renderer": "^3.6.0",
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@types/node": "^20.8.9",
+    "@typescript-eslint/parser": "^6.9.1",
+    "@vueuse/core": "^10.6.0",
+    "@vueuse/nuxt": "^10.6.0",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier-vue": "^5.0.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "lint-staged": "^15.0.2",
+    "local-ssl-proxy": "^2.0.5",
+    "nuxt": "^3.8.0",
+    "nuxt-simple-sitemap": "^4.1.6",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.5",
+    "storyblok-generate-ts": "^1.15.1",
+    "stylelint": "^15.11.0",
+    "stylelint-prettier": "^4.0.2",
+    "vue": "^3.3.7",
+    "vue-eslint-parser": "^9.3.2",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "@storyblok/nuxt": "^5.7.6",
+    "pinia": "^2.1.7",
+    "vue3-carousel-nuxt": "^1.1.0"
+  }
+}

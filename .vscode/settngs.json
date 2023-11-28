@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": ["vue", "html", "javascript"],
+  "eslint.options": {
+    "extensions": [".js", ".vue", ".ts"]
+  },
+  "prettier.singleAttributePerLine": false,
+  "eslint.enable": true,
+  "files.eol": "\n"
+}
