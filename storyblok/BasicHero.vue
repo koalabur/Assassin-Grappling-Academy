@@ -23,7 +23,8 @@ import {
 import type { BasicHeroData } from '@/types/components/BasicHero';
 
 const props = defineProps<BasicHeroData>();
-const { blok } = props;
+const data = computed(() => props);
+const { blok } = data.value;
 
 const alignment = computed(() => {
   switch (blok.textPosition) {

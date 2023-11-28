@@ -15,7 +15,8 @@
 import type { FloatingMotifData } from '@/types/components/FloatingMotif';
 
 const props = defineProps<FloatingMotifData>();
-const { blok } = props;
+const data = computed(() => props);
+const { blok } = data.value;
 
 const { $md } = useNuxtApp();
 const showOnMobile = computed(() => blok.showOnMobile || $md.value);

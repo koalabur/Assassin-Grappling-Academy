@@ -79,12 +79,7 @@
         to="https://www.google.com/maps/place/Assassin+Grappling+Academy/@36.1572747,-115.060334,15z/data=!4m8!3m7!1s0x80c8db7aebe9762b:0x5c6e6fcaee5ea54f!8m2!3d36.1572747!4d-115.060334!9m1!1b1!16s%2Fg%2F11swm1t9qs?entry=ttu"
         target="_blank"
       >
-        <NuxtImg
-          src="/img/google-reviews.png"
-          width="171"
-          height="89"
-          loading="lazy"
-        />
+        <GoogleReviews class="footer__google-icon" />
       </NuxtLink>
     </div>
     <p class="footer__text footer__text--copyright">
@@ -103,9 +98,10 @@ import type { Footer } from '@/types/components/Footer';
 
 const { $lg } = useNuxtApp();
 
+const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production';
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/default-layout', {
-  version: 'draft',
+  version: isPreview ? 'draft' : 'published',
   resolve_links: 'url',
 });
 const story = ref<Footer>(data.story.content.footer[0]);

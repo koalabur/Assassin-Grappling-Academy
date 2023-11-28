@@ -58,7 +58,8 @@ import type { TextImageSectionData } from '@/types/components/TextImageSection';
 const { $md } = useNuxtApp();
 
 const props = defineProps<TextImageSectionData>();
-const { blok } = props;
+const data = computed(() => props);
+const { blok } = data.value;
 
 const textImageSectionContainerClass = computed(() => ({
   'text-image-section__container': true,

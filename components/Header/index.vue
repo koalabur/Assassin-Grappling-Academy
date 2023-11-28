@@ -50,7 +50,7 @@
           v-if="!$lg"
           :class="hamburgerClass"
           role="button"
-          :aria-expanded="store.showNav"
+          :aria-expanded="!!store.showNav"
           @click="toggleNav"
         >
           <span />
@@ -177,9 +177,10 @@ import type {
 const { $lg } = useNuxtApp();
 const store = useNavStore();
 
+const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production';
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/default-layout', {
-  version: 'draft',
+  version: isPreview ? 'draft' : 'published',
   resolve_links: 'url',
 });
 const story = ref(data.story.content.header[0]);

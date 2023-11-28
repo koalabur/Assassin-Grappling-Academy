@@ -23,6 +23,7 @@ module.exports = {
     'vue/html-closing-bracket-newline': 0,
     'vue/html-self-closing': 0,
     'vue/no-v-html': 0,
+    'vue/no-setup-props-reactivity-loss': 2,
     'arrow-parens': 0,
     'space-before-function-paren': 0,
     'singleline-html-attributes': 0,

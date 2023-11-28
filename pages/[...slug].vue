@@ -8,11 +8,6 @@ const { slug } = useRoute().params;
 const url = slug && slug.length > 0 ? slug.join('/') : 'home';
 
 const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production';
-// const story = await useAsyncStoryblok(
-//   slug && slug.length > 0 ? slug.join('/') : 'home',
-//   { version: isPreview ? 'draft' : 'published', resolve_links: 'url' },
-//   { resolveLinks: 'url' },
-// );
 
 const { data: story, pending } = await useAsyncData(`en-${url}`, async () => {
   const { data } = await useStoryblokApi().get(
@@ -38,8 +33,12 @@ onMounted(() => {
 
 useSeoMeta({
   index: story.value.content.enableSeo ? 'index' : 'none',
-  title: `AGA - ${story.value.content.pageSeoTitle}` || 'AGA',
-  ogTitle: `AGA - ${story.value.content.pageSeoTitle}` || 'AGA',
+  title:
+    `Assassin Grappling Academy | ${story.value.content.pageSeoTitle}` ||
+    'Assassin Grappling Academy',
+  ogTitle:
+    `Assassin Grappling Academy | ${story.value.content.pageSeoTitle}` ||
+    'Assassin Grappling Academy',
   description:
     story.value.content.pageSeoDescription || 'Assassin Grappling Academy',
   ogDescription:
