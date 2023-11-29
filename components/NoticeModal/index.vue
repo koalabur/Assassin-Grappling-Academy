@@ -45,7 +45,7 @@ const noticeCookie = useCookie('aga_notice', {
   sameSite: 'strict',
 });
 
-if (noticeCookie.value === 'seen' && notice.value.useNotice) {
+if (noticeCookie.value !== 'seen' && notice.value.useNotice) {
   noticeCookie.value = 'seen';
   showModal.value = true;
   if (process.client) {
