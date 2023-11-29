@@ -8,11 +8,13 @@
       <NuxtImg
         class="image-gallery__img"
         :src="item.filename"
-        :alt="item.alt || `Image ${index + 1}`"
-        width="289"
-        height="225"
+        :alt="item.alt || `Gallery Image ${index + 1}`"
+        :width="useGetAssetWidth(item.filename)"
+        :height="useGetAssetHeight(item.filename)"
         loading="lazy"
-        @click="openModal(item.filename, item.alt || `Image ${index + 1}`)"
+        @click="
+          openModal(item.filename, item.alt || `Gallery Image ${index + 1}`)
+        "
       />
     </div>
     <ImageModal
@@ -24,6 +26,10 @@
 </template>
 
 <script lang="ts" setup>
+import {
+  useGetAssetWidth,
+  useGetAssetHeight,
+} from '@/composables/useGetAssetDimensions';
 import type { ImageGalleryData } from '@/types/components/ImageGallery';
 
 defineProps<ImageGalleryData>();
@@ -45,7 +51,7 @@ function openModal(image: string, alt: string) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-columns: 1fr;
-  gap: #{fluid(5px, 25px)};
+  gap: #{fluid(5px, 20px)};
 
   @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
@@ -57,10 +63,15 @@ function openModal(image: string, alt: string) {
 
   &__img {
     max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: rem(250);
     display: block;
     object-fit: cover;
     cursor: crosshair;
+
+    @include mq(md) {
+      height: rem(300);
+    }
   }
 }
 </style>
