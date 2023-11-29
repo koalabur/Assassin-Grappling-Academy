@@ -1,6 +1,8 @@
 <template>
   <Header />
-  <NoticeModal />
-  <slot />
+  <main>
+    <NoticeModal />
+    <slot />
+  </main>
   <Footer />
 </template>

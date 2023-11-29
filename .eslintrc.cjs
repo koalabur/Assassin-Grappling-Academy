@@ -24,6 +24,14 @@ module.exports = {
     'vue/html-self-closing': 0,
     'vue/no-v-html': 0,
     'vue/no-setup-props-reactivity-loss': 2,
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
     'arrow-parens': 0,
     'space-before-function-paren': 0,
     'singleline-html-attributes': 0,

@@ -312,6 +312,8 @@ const headerSocials = computed(() =>
   }
 
   &__main {
+    position: fixed;
+    background: $secondary-color;
     display: flex;
     align-items: center;
     width: 100%;
@@ -321,6 +323,7 @@ const headerSocials = computed(() =>
     @include edge-padding;
 
     @include mq(lg) {
+      position: static;
       gap: #{fluid(0px, 120px)};
       @include page-width;
     }
