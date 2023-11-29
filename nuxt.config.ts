@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: process.env.NUXT_PUBLIC_NODE_ENV === 'production',
+  ssr: true,
   app: {
     head: {
       htmlAttrs: {
@@ -44,15 +44,15 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'vue3-carousel-nuxt',
-    'nuxt-simple-sitemap',
     '@nuxtjs/robots',
+    'nuxt-simple-sitemap',
     'nuxt-gtag',
   ],
   gtag: {
     id: 'G-DHB1NJW7BD',
   },
   site: {
-    url: 'https://www.assassingrappling.com/',
+    url: 'https://www.assassingrappling.com',
   },
   runtimeConfig: {
     public: {
