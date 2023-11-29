@@ -1,9 +1,13 @@
 <template>
   <Teleport to="body">
-    <div class="image-modal" :class="{ 'image-modal--open': isOpen }">
+    <div
+      v-if="image"
+      class="image-modal"
+      :class="{ 'image-modal--open': isOpen }"
+    >
       <div class="image-modal__overlay" @click="closeModal" />
       <div class="image-modal__content">
-        <button class="image-modal__close" @click="closeModal">
+        <button v-if="image" class="image-modal__close" @click="closeModal">
           close image
         </button>
         <NuxtImg

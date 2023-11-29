@@ -1,6 +1,10 @@
 <template>
   <Teleport to="body">
-    <div class="notice-modal" :class="{ 'notice-modal--open': showModal }">
+    <div
+      v-if="showModal && notice.useNotice"
+      class="notice-modal"
+      :class="{ 'notice-modal--open': showModal }"
+    >
       <div class="notice-modal__overlay" />
       <div class="notice-modal__content">
         <h2 class="notice-modal__subtitle">{{ notice.subtitle }}</h2>
@@ -38,7 +42,7 @@ function closeModal() {
   noticeCookie.value = 'seen';
 }
 
-const showModal = ref(false);
+const showModal = ref(true);
 
 const noticeCookie = useCookie('aga_notice', {
   maxAge: 86400, // 24 hours
@@ -46,7 +50,6 @@ const noticeCookie = useCookie('aga_notice', {
 });
 
 if (noticeCookie.value !== 'seen' && notice.value.useNotice) {
-  noticeCookie.value = 'seen';
   showModal.value = true;
   if (process.client) {
     document.body.style.overflow = 'hidden';

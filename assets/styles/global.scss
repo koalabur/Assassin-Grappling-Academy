@@ -18,6 +18,14 @@ body {
   position: relative;
 }
 
+main {
+  margin-top: #{fluid(68px, 151px)};
+
+  @include mq(lg) {
+    margin-top: 0;
+  }
+}
+
 h1,
 h2,
 h3,
