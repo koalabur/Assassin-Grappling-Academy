@@ -92,6 +92,9 @@ function closeModal() {
 
   &__img {
     border-radius: rem(12);
+    height: auto;
+    max-height: 90vh;
+    width: 100%;
   }
 
   &__overlay {
