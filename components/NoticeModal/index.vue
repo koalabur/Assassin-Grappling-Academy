@@ -1,6 +1,6 @@
 <template>
   <Teleport to="body">
-    <div class="notice-modal" :class="{ 'notice-modal--open': store.visible }">
+    <div class="notice-modal" :class="{ 'notice-modal--open': showModal }">
       <div class="notice-modal__overlay" />
       <div class="notice-modal__content">
         <h2 class="notice-modal__subtitle">{{ notice.subtitle }}</h2>
@@ -14,10 +14,7 @@
   </Teleport>
 </template>
 <script lang="ts" setup>
-import { useNoticeStore } from '@/stores/notice';
 import type { Notice } from '@/types/components/Notice';
-
-const store = useNoticeStore();
 
 const isPreview = useRuntimeConfig().public.NODE_ENV !== 'production';
 const storyblokApi = useStoryblokApi();
@@ -35,18 +32,26 @@ const notice = computed<Notice>(() => ({
   useNotice: story.value.useNotice,
 }));
 
-store.visibleChange(notice.value.useNotice);
-
 function closeModal() {
-  store.closeNotice();
+  showModal.value = false;
   document.body.style.overflow = 'auto';
+  noticeCookie.value = 'seen';
 }
 
-onMounted(() => {
-  if (store.visible) {
+const showModal = ref(false);
+
+const noticeCookie = useCookie('aga_notice', {
+  maxAge: 86400, // 24 hours
+  sameSite: 'strict',
+});
+
+if (noticeCookie.value === 'seen' && notice.value.useNotice) {
+  noticeCookie.value = 'seen';
+  showModal.value = true;
+  if (process.client) {
     document.body.style.overflow = 'hidden';
   }
-});
+}
 </script>
 
 <style lang="scss" scoped>
