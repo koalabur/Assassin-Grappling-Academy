@@ -42,7 +42,7 @@
     "eslint-plugin-vue": "^9.18.1",
     "lint-staged": "^15.0.2",
     "local-ssl-proxy": "^2.0.5",
-    "nuxt": "^3.8.2",
+    "nuxt": "^3.8.0",
     "nuxt-gtag": "^1.1.1",
     "nuxt-simple-sitemap": "^4.1.6",
     "prettier": "^3.0.3",

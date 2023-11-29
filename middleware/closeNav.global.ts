@@ -5,5 +5,6 @@ export default defineNuxtRouteMiddleware(() => {
   store.closeNav();
   if (process.client) {
     document.body.style.overflow = 'auto';
+    window.scrollTo(0, 0);
   }
 });
