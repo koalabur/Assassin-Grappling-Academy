@@ -110,6 +110,8 @@ const { $md } = useNuxtApp();
 
     @include mq(sm) {
       flex-flow: row nowrap;
+      max-width: rem(600);
+      width: 100%;
     }
   }
 
@@ -235,7 +237,7 @@ const { $md } = useNuxtApp();
       color: $secondary-color;
       height: auto;
       padding: 0;
-      max-width: rem(544);
+      max-width: rem(600);
       margin-bottom: rem(20);
     }
   }

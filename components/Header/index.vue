@@ -320,6 +320,7 @@ const headerSocials = computed(() =>
     justify-content: space-between;
     padding-top: rem(5);
     padding-bottom: rem(5);
+    top: 0;
     @include edge-padding;
 
     @include mq(lg) {
