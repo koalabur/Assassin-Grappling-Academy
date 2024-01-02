@@ -3,5 +3,7 @@ export interface SpacerData {
     component: 'Spacer';
     desktop: number;
     mobile: number;
+    marginTop?: number;
+    marginTopMobile?: number;
   };
 }
