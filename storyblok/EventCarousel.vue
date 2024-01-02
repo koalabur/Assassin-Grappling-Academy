@@ -173,6 +173,7 @@ onMounted(() => {
 
   &__img {
     max-width: 100%;
+    width: 100%;
     height: rem(276);
     object-fit: cover;
     display: flex;
