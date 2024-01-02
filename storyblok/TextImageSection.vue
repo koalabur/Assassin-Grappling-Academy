@@ -93,7 +93,10 @@ const invertLightOrDark = computed(() => {
     border-radius: rem(10);
 
     @include mq(md) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 427px;
+      grid-template-rows: 1fr;
+      grid-auto-flow: row;
       align-items: center;
       gap: rem(45);
     }
@@ -110,7 +113,14 @@ const invertLightOrDark = computed(() => {
 
     &--reverse {
       @include mq(md) {
-        flex-direction: row-reverse;
+        grid-auto-flow: dense;
+        grid-template-columns: 427px 1fr;
+      }
+    }
+
+    &--reverse > .text-image-section__content {
+      @include mq(md) {
+        grid-column: 2;
       }
     }
   }
@@ -121,6 +131,7 @@ const invertLightOrDark = computed(() => {
 
   &__img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     margin-top: rem(16);
     border-radius: rem(13);
