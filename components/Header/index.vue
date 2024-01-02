@@ -422,7 +422,7 @@ const headerSocials = computed(() =>
   padding-top: rem(53);
   visibility: hidden;
   position: fixed;
-  top: #{fluid(67px, 160px)}; // match with padding-bottom
+  top: #{fluid(59px, 160px)}; // match with padding-bottom
   padding-bottom: #{fluid(67px, 160px)};
   left: 0;
   width: 100%;
