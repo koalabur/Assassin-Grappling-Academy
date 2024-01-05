@@ -42,7 +42,7 @@ function closeModal() {
   noticeCookie.value = 'seen';
 }
 
-const showModal = ref(true);
+const showModal = ref(false);
 
 const noticeCookie = useCookie('aga_notice', {
   maxAge: 86400, // 24 hours
