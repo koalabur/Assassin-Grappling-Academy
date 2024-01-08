@@ -44,7 +44,6 @@
     "local-ssl-proxy": "^2.0.5",
     "nuxt": "^3.8.0",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-simple-sitemap": "^4.1.6",
     "prettier": "^3.0.3",
     "sass": "^1.69.5",
     "storyblok-generate-ts": "^1.15.1",
@@ -55,6 +54,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@cheers-io/nuxt-storyblok-sitemap": "^1.4.0",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.5.1",
     "@storyblok/nuxt": "^5.7.6",

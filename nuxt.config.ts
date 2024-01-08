@@ -45,14 +45,18 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'vue3-carousel-nuxt',
     '@nuxtjs/robots',
-    'nuxt-simple-sitemap',
     'nuxt-gtag',
+    '@cheers-io/nuxt-storyblok-sitemap',
   ],
+  storyblokSitemap: {
+    accessToken: process.env.storyblok_api,
+    baseUrl: 'https://www.assassingrappling.com',
+    apiUrl: 'https://api-us.storyblok.com/v2/cdn/stories',
+    blacklist: ['^default-layout'],
+    defaultLocale: 'en',
+  },
   gtag: {
     id: 'G-DHB1NJW7BD',
-  },
-  site: {
-    url: 'https://www.assassingrappling.com',
   },
   runtimeConfig: {
     public: {
