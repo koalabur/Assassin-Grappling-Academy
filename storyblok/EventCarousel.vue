@@ -172,13 +172,14 @@ onMounted(() => {
   }
 
   &__img {
-    width: rem(349);
+    width: 100%;
     height: auto;
     object-fit: cover;
     display: flex;
 
     @include mq(md) {
       height: auto;
+      width: rem(349);
     }
   }
 
