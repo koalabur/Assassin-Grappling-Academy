@@ -26,7 +26,7 @@ if (!story.value) {
 }
 
 onMounted(() => {
-  if (story.value && story.value.id) {
+  if (isPreview && story.value && story.value.id) {
     useStoryblokBridge(story.value.id, (evStory) => (story.value = evStory));
   }
 });
